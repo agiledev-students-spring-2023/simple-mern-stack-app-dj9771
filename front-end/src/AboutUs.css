@@ -1,0 +1,16 @@
+@media (max-resolution: 500dpi) {
+img {
+    max-width: 100%;
+  }
+}
+
+h1{
+    color:blue;
+}
+
+p{
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+}
+
