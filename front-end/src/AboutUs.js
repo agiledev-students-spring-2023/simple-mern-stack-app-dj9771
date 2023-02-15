@@ -33,6 +33,7 @@ const AboutUs = props => {
           })
   }
 
+  //return the content of About Us page
   return (
       <>
         <h1>Self-Introduction</h1>

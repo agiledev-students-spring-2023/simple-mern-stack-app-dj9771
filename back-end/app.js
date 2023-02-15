@@ -22,7 +22,7 @@ mongoose
 const { Message } = require('./models/Message')
 const { User } = require('./models/User')
 
-// a route to handle About Us
+// a route to handle fetching About Us
 app.get('/aboutUs', async (req, res) => {
   // load myself from database
   try{
@@ -30,6 +30,7 @@ app.get('/aboutUs', async (req, res) => {
       name:"Danica Jin",
       imageURL:"https://user-images.githubusercontent.com/123530738/218908404-476eadab-ceec-41a6-a386-4302c44b5ac9.jpeg",
       description: "Hello everyone! I am Danica Jin, a sophomore at the College of Arts and Science at New York University. \nMy major is computer science and mathematics, and I may also plan to have economics as my minor. \nMy hobbies are playing saxophone, playing badminton, skating, writing, swimming, and traveling. Besides those hobbies listed above, I am also good at calligraphy and Chinese painting.\nI come from Beijing which is the capital city of China, and now I live in Jersey City, so I spend 30 minutes taking the path train to New York City every day.\nVisiting museums and watching Broadway shows during weekends, I feel my daily life is more colorful in NYC. \nIt's very nice to meet you on this website.",
+      status: 'all good',
     }]
     return res.json(myself);
   }catch (err) {
