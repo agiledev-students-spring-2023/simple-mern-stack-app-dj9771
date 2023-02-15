@@ -1,7 +1,7 @@
 @media (max-resolution: 500dpi) {
 .aboutUsImage {
-    max-width: 30%;
-    border-radius: 100%;
+    max-width: 25%;
+    border-radius: 5%;
     max-height: 20%;
   }
 }

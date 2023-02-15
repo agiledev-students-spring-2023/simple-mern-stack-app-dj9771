@@ -1,11 +1,7 @@
 import './AboutUs.css'
-
 import './App.css'
-
 import { useState, useEffect } from 'react'
-
 import axios from 'axios'
-
 
 /**
  * A React component that represents the About Us page of the app.
@@ -16,11 +12,11 @@ const AboutUs = props => {
   const [AboutMeData, setAboutMeData] = useState([])
   const [loaded, setLoaded] = useState(false)
   const [error, setError] = useState('')
+
   useEffect(() => {
-
-    fetchAboutMeData()
-
+      fetchAboutMeData()
   }, [])
+
   const fetchAboutMeData = () => {
       axios
           .get(`${process.env.REACT_APP_SERVER_HOSTNAME}/aboutUs`)
@@ -42,16 +38,14 @@ const AboutUs = props => {
         <h1>Self-Introduction</h1>
         <br></br>
 
-
         <h2>{AboutMeData.map(AboutMeData => AboutMeData.name)}</h2>
-
         <br></br>
-        <p>{AboutMeData.map(AboutMeData => AboutMeData.description)}</p>
 
+        <p>{AboutMeData.map(AboutMeData => AboutMeData.description)}</p>
         <br></br>
 
         {AboutMeData.map(AboutMeData => 
-          <img src={AboutMeData.imageUrl} alt="self" className="aboutUsImage"></img>
+          <img src={AboutMeData.imageURL} alt="self" className="aboutUsImage"></img>
         )}
       </>
   )
